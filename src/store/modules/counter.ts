@@ -5,6 +5,11 @@ const countSlice = createSlice({
     count: 100,
     message: 'hello'
   },
-  reducers: {}
+  reducers: {
+    changeMessageAction(state, { payload }) {
+      state.message = payload
+    }
+  }
 })
+export const { changeMessageAction } = countSlice.actions
 export default countSlice.reducer
