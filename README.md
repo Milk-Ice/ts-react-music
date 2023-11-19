@@ -1,46 +1,129 @@
-# Getting Started with Create React App
+# 项目开发过程
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
 
-In the project directory, you can run:
+## 一. 项目的创建
 
-### `npm start`
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+### 1.1. 项目简单的介绍
 
-### `npm test`
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+### 1.2. 创建项目--template typescript
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 1.3. 对目录结构分析
 
-### `npm run eject`
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## 二. 代码的规范
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
 
-## Learn More
+### 2.1. editorconfig
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+
+### 2.2. prettier
+
+
+
+- VSCode Prettier安装插件
+
+- npm install prettier -D 
+
+- - prettier --write .
+
+- .prettierrc
+
+- .prettierignore
+
+
+
+### 2.3. eslint
+
+
+
+- VSCode ESLint安装插件
+
+- npm install eslint -D
+
+- eslint --init 
+
+- - 各种选择
+
+- 需要和prettier结合 
+
+- - npm install eslint-config-prettier eslint-plugin-prettier -D
+
+- - 配置: 'plugin:prettier/recommended'
+
+
+
+## 三. 项目的搭建
+
+
+
+### 3.1. 目录结构的划分
+
+
+
+### 3.2. CSS的重置
+
+
+
+### 3.3. 路由的配置
+
+
+
+- 一级路由的配置
+
+- React组件的TypeScript类型写法 
+
+- - 函数式组件的类型.
+
+- - 类组件的类型.(后续)
+
+- 路由的懒加载(lazy) 
+
+- - suspense fallback
+
+- 二级路由的配置 
+
+- - Outlet
+
+- - suspense
+
+
+
+### 3.4. 状态管理redux
+
+
+
+- 配置store 
+
+- - configureStore
+
+- - Provider
+
+- 创建slice 
+
+- - name
+
+- - initialState
+
+- - reducers
+
+- useSelector的类型问题 => state 
+
+- - type IRootState ReturnType
+
+- - const useAppSelector: TypedUseSelectorHook = useSelector
+
+- TypedUseSelectorHook内部的实现细节
+
+- useDispatch抽取
+
+- shallowEqual抽取
