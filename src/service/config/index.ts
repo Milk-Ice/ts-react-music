@@ -15,4 +15,4 @@ export const TIME_OUT = 10000
 // export { BASE_URL }
 
 // 3.从定义的环境变量的配置文件中, 加载变量
-// console.log(process.env.REACT_APP_BASE_URL)
+console.log(process.env.REACT_APP_BASE_URL)
