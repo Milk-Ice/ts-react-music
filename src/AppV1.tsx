@@ -1,5 +1,5 @@
 import React, { Suspense } from 'react'
-import { Link, useRoutes } from 'react-router-dom'
+import { useRoutes } from 'react-router-dom'
 import routes from './router'
 import { shallowEqualApp, useAppDispatch, useAppSelector } from './store'
 import { changeMessageAction } from './store/modules/counter'

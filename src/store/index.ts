@@ -7,9 +7,11 @@ import {
 } from 'react-redux'
 
 import counterReducer from './modules/counter'
+import recommendReducer from '@/views/discover/c-views/recommend/store/recommend'
 const store = configureStore({
   reducer: {
-    counter: counterReducer
+    counter: counterReducer,
+    recommend: recommendReducer
   }
 })
 // 定义了一个类型别名 GetStateFnType，拿到getState的函数类型

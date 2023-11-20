@@ -40,7 +40,7 @@ const routes: RouteObject[] = [
         element: <Album />
       },
       {
-        path: '/discover/artitst',
+        path: '/discover/artist',
         element: <Artitst />
       },
       {
