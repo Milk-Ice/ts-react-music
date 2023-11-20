@@ -3,6 +3,7 @@ import React, { ElementRef, memo, useRef, useState } from 'react'
 import type { ReactNode, FC } from 'react'
 import { Carousel } from 'antd'
 import { BannerControl, BannerLeft, BannerRight, BannerWrapper } from './style'
+import classNames from 'classnames'
 
 interface IProps {
   chidren?: ReactNode
@@ -22,6 +23,9 @@ const TopBanner: FC<IProps> = () => {
   function HandleAfterCarouselChange(current: number) {
     setCurrentIndex(current)
   }
+  /** 事件处理函数 */
+
+  function HandleBeforeChange() {}
   /** 从store中获取数据 */
   const { banners } = useAppSelector(
     (state) => ({
@@ -51,6 +55,7 @@ const TopBanner: FC<IProps> = () => {
             effect="fade"
             ref={bannerRef}
             afterChange={HandleAfterCarouselChange}
+            beforeChange={HandleBeforeChange}
           >
             {banners.map((item) => {
               return (
@@ -64,6 +69,19 @@ const TopBanner: FC<IProps> = () => {
               )
             })}
           </Carousel>
+          <ul className="dots">
+            {banners.map((item, index) => {
+              return (
+                <li key={item.imageUrl}>
+                  <span
+                    className={classNames('item', {
+                      active: index === currentIndex
+                    })}
+                  ></span>
+                </li>
+              )
+            })}
+          </ul>
         </BannerLeft>
         <BannerRight></BannerRight>
         <BannerControl>
