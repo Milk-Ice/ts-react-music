@@ -33,10 +33,10 @@ const TopBanner: FC<IProps> = () => {
     }),
     shallowEqualApp
   )
-  // 获取背景照片
-  let bgImageUrl = banners[currentIndex]?.imageUrl
-  if (bgImageUrl) {
-    bgImageUrl = bgImageUrl + '?imageView&blur=40x20'
+  /** 获取背景图片 */
+  let bgImageUrl
+  if (currentIndex >= 0 && banners.length > 0) {
+    bgImageUrl = banners[currentIndex].imageUrl + '?imageView&blur=40x20'
   }
   // console.log(bgImageUrl)
 
